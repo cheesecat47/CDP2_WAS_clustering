@@ -1,6 +1,5 @@
 #!/bin/bash
 
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' = # Print a line
 echo "start change_jvmRoute.sh"
 
 tomcat1="tomcat-server1"
@@ -30,5 +29,3 @@ fi
 
 echo "after change"
 sed -n 133p < conf/server.xml
-
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#' # Print a line

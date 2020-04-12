@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 
 services: 
 
@@ -20,8 +20,8 @@ services:
     tomcat1:
         build:
             context: ./tomcat_src/
-            dockerfile: ./Dockerfile
-        image: mytomcat
+            dockerfile: ./Dockerfile1
+        image: mytomcat:tomcat1
         container_name: tomcat-server1
         hostname: tomcat-server1
         ports: 
@@ -34,11 +34,14 @@ services:
                 max-size: "10m"
 
     tomcat2:
-        image: mytomcat
+        build:
+            context: ./tomcat_src/
+            dockerfile: ./Dockerfile2
+        image: mytomcat:tomcat2
         container_name: tomcat-server2
         hostname: tomcat-server2
-        depends_on:
-            - tomcat1
+        # depends_on:
+        #     - tomcat1
         ports: # May be need to erase 
             - "8180:8080"
             - "8109:8009"  # for sync with apache
