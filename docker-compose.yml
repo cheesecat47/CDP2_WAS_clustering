@@ -8,6 +8,7 @@ services:
             dockerfile: ./Dockerfile
         image: myapache
         container_name: apache-server
+        hostname: apache-server
         ports: 
             - "80:80"
         logging: 
@@ -22,6 +23,7 @@ services:
             dockerfile: ./Dockerfile
         image: mytomcat
         container_name: tomcat-server1
+        hostname: tomcat-server1
         ports: 
             - "8080:8080"
             - "8009:8009"  # for sync with apache
@@ -34,6 +36,7 @@ services:
     tomcat2:
         image: mytomcat
         container_name: tomcat-server2
+        hostname: tomcat-server2
         depends_on:
             - tomcat1
         ports: # May be need to erase 

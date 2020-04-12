@@ -13,4 +13,10 @@ RUN mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps
 RUN rm -rf /usr/local/tomcat/webapps/ROOT/*
 COPY ./webcontents/* /usr/local/tomcat/webapps/ROOT/
 
+# Change jvmRoute in conf/server.xml
+COPY ./change_jvmRoute.sh /usr/local/tomcat/change_jvmRoute.sh
+RUN ./change_jvmRoute.sh
 
+# After change, restart tomcat
+RUN bin/shutdown.sh
+RUN bin/startup.sh
