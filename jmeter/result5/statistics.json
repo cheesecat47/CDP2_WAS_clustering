@@ -1,0 +1,32 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 2000,
+    "errorCount" : 1000,
+    "errorPct" : 50.0,
+    "meanResTime" : 13324.047999999986,
+    "minResTime" : 3.0,
+    "maxResTime" : 26760.0,
+    "pct1ResTime" : 26691.0,
+    "pct2ResTime" : 26721.0,
+    "pct3ResTime" : 26742.98,
+    "throughput" : 7.243332512422316,
+    "receivedKBytesPerSec" : 9.135511659954512,
+    "sentKBytesPerSec" : 0.0
+  },
+  "AJP/1.3 Sampler" : {
+    "transaction" : "AJP/1.3 Sampler",
+    "sampleCount" : 2000,
+    "errorCount" : 1000,
+    "errorPct" : 50.0,
+    "meanResTime" : 13324.047999999986,
+    "minResTime" : 3.0,
+    "maxResTime" : 26760.0,
+    "pct1ResTime" : 26691.0,
+    "pct2ResTime" : 26721.0,
+    "pct3ResTime" : 26742.98,
+    "throughput" : 7.243332512422316,
+    "receivedKBytesPerSec" : 9.135511659954512,
+    "sentKBytesPerSec" : 0.0
+  }
+}
